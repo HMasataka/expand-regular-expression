@@ -8,10 +8,18 @@
 . .venv/bin/activate
 ```
 
+```bash
+deactivate
+```
+
 ### fish
 
 ```bash
 . .venv/bin/activate.fish
+```
+
+```bash
+deactivate
 ```
 
 ## 依存環境インストール
