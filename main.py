@@ -12,6 +12,8 @@ def main():
         urllist = list(sre_yield.AllStrings(text))
         result += urllist
 
+    result = list(set(result))
+
     with open("after.txt", "w+") as f:
         for text in result:
             f.write(text)
