@@ -10,5 +10,11 @@ dependencies = [
 
 [tool.uv]
 dev-dependencies = [
+    "ruff-lsp>=0.0.57",
     "ruff>=0.6.8",
+]
+
+[tool.rye]
+dev-dependencies = [
+    "ruff-lsp>=0.0.57",
 ]

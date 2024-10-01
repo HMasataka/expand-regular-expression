@@ -2,9 +2,20 @@ import sre_yield
 
 
 def main():
-    regex = r"http://xxx/abc[x-z]/image(9|10|11)\.png"
-    urllist = list(sre_yield.AllStrings(regex))
-    print(urllist)
+    with open("before.txt", "r") as f:
+        before = f.read().splitlines()
+
+    result = []
+
+    for text in before:
+        print(text)
+        urllist = list(sre_yield.AllStrings(text))
+        result += urllist
+
+    with open("after.txt", "w+") as f:
+        for text in result:
+            f.write(text)
+            f.write("\n")
 
 
 if __name__ == "__main__":
